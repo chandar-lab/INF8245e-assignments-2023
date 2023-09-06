@@ -3,9 +3,9 @@ from otter.test_files import test_case
 OK_FORMAT = False
 
 name = "q2.2"
-points = 6
+points = 15
 
-@test_case(points=0.25, hidden=False)
+@test_case(points=0.5, hidden=False)
 def test_3b1_public(np, regression_gradient_descent):
 
     out = regression_gradient_descent(
@@ -20,20 +20,20 @@ def test_3b1_public(np, regression_gradient_descent):
 
     np.testing.assert_allclose(
         out[0],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[1],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[2],
-        np.asarray([[1.], [1.]], dtype=np.float32)
+        np.asarray([[1.], [1.]], dtype=np.float32), atol=1e-6
     )
 
-@test_case(points=0.25, hidden=False)
+@test_case(points=0.5, hidden=False)
 
 def test_3b2_public(np, regression_gradient_descent):
 
@@ -49,20 +49,20 @@ def test_3b2_public(np, regression_gradient_descent):
 
     np.testing.assert_allclose(
         out[0],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[1],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[2],
-        np.asarray([[0.9], [0.9]], dtype=np.float32)
+        np.asarray([[0.9], [0.9]], dtype=np.float32), atol=1e-6
     )
 
-@test_case(points=0.25, hidden=False)
+@test_case(points=0.5, hidden=False)
 
 def test_3b3_public(np, regression_gradient_descent):
 
@@ -78,16 +78,16 @@ def test_3b3_public(np, regression_gradient_descent):
 
     np.testing.assert_allclose(
         out[0],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[1],
-        np.asarray([0], dtype=np.float32)
+        np.asarray([0], dtype=np.float32), atol=1e-6
     )
 
     np.testing.assert_allclose(
         out[2],
-        np.asarray([[0.9], [0.9]], dtype=np.float32)
+        np.asarray([[0.9], [0.9]], dtype=np.float32), atol=1e-6
     )
 
