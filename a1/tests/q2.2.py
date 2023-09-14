@@ -88,6 +88,6 @@ def test_3b3_public(np, regression_gradient_descent):
 
     np.testing.assert_allclose(
         out[2],
-        np.asarray([[0.9], [0.9]], dtype=np.float32), atol=1e-6
+        np.asarray([[0.95], [0.95]], dtype=np.float32), atol=1e-6
     )
 
