@@ -3,10 +3,9 @@ from otter.test_files import test_case
 OK_FORMAT = False
 
 name = "q2.1"
-points = 10
+points = 15
 
-
-@test_case(points=1.5, hidden=False)
+@test_case(points=0.5, hidden=False)
 def test_q2a_public(
     np,
     ReLULayer,
@@ -74,3 +73,4 @@ def test_q2a_public(
     np.testing.assert_allclose(_relu_layer.input_grad, _np_y_relu_grad)
     np.testing.assert_allclose(_tanh_layer.input_grad, _np_y_tanh_grad)
     np.testing.assert_allclose(_softmax_layer.input_grad, _np_y_softmax_grad)
+

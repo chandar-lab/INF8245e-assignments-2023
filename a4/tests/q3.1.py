@@ -3,10 +3,9 @@ from otter.test_files import test_case
 OK_FORMAT = False
 
 name = "q3.1"
-points = 10
+points = 5
 
-
-@test_case(points=1.5, hidden=False)
+@test_case(points=0.5, hidden=False)
 def test_q3a_public(np, MLP, Dense, ReLULayer, SoftmaxLayer):
     _layers = [
         Dense(2, 4, weights=np.array([[1, 2, 3, 4], [5, 6, 7, 8]])),
@@ -42,3 +41,4 @@ def test_q3a_public(np, MLP, Dense, ReLULayer, SoftmaxLayer):
     _y_mlp = _mlp.forward(_x)
     assert _y_mlp.shape == _y_np.shape
     np.testing.assert_allclose(_y_mlp, _y_np)
+

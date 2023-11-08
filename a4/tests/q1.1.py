@@ -5,8 +5,7 @@ OK_FORMAT = False
 name = "q1.1"
 points = 10
 
-
-@test_case(points=1.5, hidden=False)
+@test_case(points=0.5, hidden=False)
 def test_q1_public(np, Dense):
     # test forward
     _W = np.array(
@@ -56,3 +55,5 @@ def test_q1_public(np, Dense):
     np.testing.assert_allclose(_dense_layer.input_grad, _np_X_grad, atol=1e-6)
     np.testing.assert_allclose(_dense_layer.weights_grad, _np_weights_grad, atol=1e-6)
     np.testing.assert_allclose(_dense_layer.bias_grad, _np_bias_grad, atol=1e-6)
+
+
